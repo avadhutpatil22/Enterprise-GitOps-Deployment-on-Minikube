@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: avadhootacr001.azurecr.io/enterprise-app
+  repository: avadhootpatil/enterprise-app
   tag: "f7da0e18b9a499d69162d98d8839ba4c17a62412"
 
 service:
