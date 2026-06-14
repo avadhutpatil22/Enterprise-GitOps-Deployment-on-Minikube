@@ -26,7 +26,8 @@ jobs:
       run: |
         docker build \
            -t avadhootpatil/enterprise-app:${{ github.sha }} \
-          .
+           -t avadhootpatil/enterprise-app:${{ github.sha }} \
+           enterprise-gitops-platform/app
 
     - name: Push Image
       run: |
