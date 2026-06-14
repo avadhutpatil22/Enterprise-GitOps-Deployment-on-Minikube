@@ -24,12 +24,12 @@ jobs:
     - name: Build Image
       run: |
         docker build \
-        -t yourdockerhub/enterprise-app:${{ github.sha }} .
+        -t avadhootpatil/enterprise-app:${{ github.sha }} .
 
     - name: Push Image
       run: |
         docker push \
-        yourdockerhub/enterprise-app:${{ github.sha }}
+        avadhootpatil/enterprise-app:${{ github.sha }}
 
     - name: Update Helm
       run: |
