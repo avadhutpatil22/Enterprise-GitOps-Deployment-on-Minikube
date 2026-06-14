@@ -24,7 +24,8 @@ jobs:
     - name: Build Image
       run: |
         docker build \
-        -t avadhootpatil/enterprise-app:${{ github.sha }} .
+        -t avadhootpatil/enterprise-app:${{ github.sha }} \
+        backend
 
     - name: Push Image
       run: |
