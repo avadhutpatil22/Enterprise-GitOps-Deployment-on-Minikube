@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: avadhootpatil/enterprise-app
-  tag: "668a83617458ddf49b143744b4c7598c35e0c334"
+   tag: latest
 
 service:
   type: ClusterIP
