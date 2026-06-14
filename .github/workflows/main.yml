@@ -21,6 +21,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    - name: Debug Repository Structure
+      run: |
+        pwd
+        find . -name Dockerfile
+
     - name: Build Image
       run: |
         docker build \
