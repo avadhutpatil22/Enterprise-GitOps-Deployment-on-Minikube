@@ -36,3 +36,14 @@ jobs:
     - name: Update Helm
       run: |
         sed -i "s/tag:.*/tag: ${{ github.sha }}/g" helm/enterprise-app/values.yaml
+        
+    - name: Commit Helm Changes
+      run: |
+         git config --global user.name "avadhutpatil22"
+         git config --global user.email "patilavadhut907@gmail.com"
+          
+         git add helm/enterprise-app/values.yaml
+
+         git commit -m "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
+
+         git push
