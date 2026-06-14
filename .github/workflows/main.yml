@@ -31,8 +31,7 @@ jobs:
 
     - name: Push Image
       run: |
-        docker push \
-        docker push avadhootpatil/enterprise-app:${{ github.sha }}
+       docker push avadhootpatil/enterprise-app:${{ github.sha }}
 
     - name: Update Helm
       run: |
