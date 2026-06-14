@@ -26,12 +26,12 @@ jobs:
       run: |
         docker build \
            -t avadhootpatil/enterprise-app:${{ github.sha }} \
-           -t avadhootpatil/enterprise-app:${{ github.sha }} \
+           -t avadhootpatil/enterprise-app:latest \
            enterprise-gitops-platform/app
 
     - name: Push Image
       run: |
-       docker push avadhootpatil/enterprise-app:${{ github.sha }}
+       docker push avadhootpatil/enterprise-app:latest
 
     - name: Update Helm
       run: |
